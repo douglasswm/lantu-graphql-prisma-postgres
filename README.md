@@ -1,0 +1,1 @@
+# lantu-graphql-prisma-postgres
