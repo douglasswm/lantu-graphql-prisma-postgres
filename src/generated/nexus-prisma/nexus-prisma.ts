@@ -1341,8 +1341,6 @@ export interface PostWhereInput {
   content_not_ends_with?: string | null
   author?: UserWhereInput | null
   AND?: PostWhereInput[]
-  OR?: PostWhereInput[]
-  NOT?: PostWhereInput[]
 }
 export type PostWhereInputInputObject =
   | Extract<keyof PostWhereInput, string>
@@ -1408,8 +1406,6 @@ export type PostWhereInputInputObject =
   | { name: 'content_not_ends_with', alias?: string  } 
   | { name: 'author', alias?: string  } 
   | { name: 'AND', alias?: string  } 
-  | { name: 'OR', alias?: string  } 
-  | { name: 'NOT', alias?: string  } 
   
 export interface UserWhereInput {
   id?: string | null
@@ -1468,12 +1464,8 @@ export interface UserWhereInput {
   name_not_starts_with?: string | null
   name_ends_with?: string | null
   name_not_ends_with?: string | null
-  posts_every?: PostWhereInput | null
   posts_some?: PostWhereInput | null
-  posts_none?: PostWhereInput | null
   AND?: UserWhereInput[]
-  OR?: UserWhereInput[]
-  NOT?: UserWhereInput[]
 }
 export type UserWhereInputInputObject =
   | Extract<keyof UserWhereInput, string>
@@ -1533,12 +1525,8 @@ export type UserWhereInputInputObject =
   | { name: 'name_not_starts_with', alias?: string  } 
   | { name: 'name_ends_with', alias?: string  } 
   | { name: 'name_not_ends_with', alias?: string  } 
-  | { name: 'posts_every', alias?: string  } 
   | { name: 'posts_some', alias?: string  } 
-  | { name: 'posts_none', alias?: string  } 
   | { name: 'AND', alias?: string  } 
-  | { name: 'OR', alias?: string  } 
-  | { name: 'NOT', alias?: string  } 
   
 export interface UserWhereUniqueInput {
   id?: string | null
@@ -1916,8 +1904,6 @@ export interface PostSubscriptionWhereInput {
   updatedFields_contains_some?: string[]
   node?: PostWhereInput | null
   AND?: PostSubscriptionWhereInput[]
-  OR?: PostSubscriptionWhereInput[]
-  NOT?: PostSubscriptionWhereInput[]
 }
 export type PostSubscriptionWhereInputInputObject =
   | Extract<keyof PostSubscriptionWhereInput, string>
@@ -1927,8 +1913,6 @@ export type PostSubscriptionWhereInputInputObject =
   | { name: 'updatedFields_contains_some', alias?: string  } 
   | { name: 'node', alias?: string  } 
   | { name: 'AND', alias?: string  } 
-  | { name: 'OR', alias?: string  } 
-  | { name: 'NOT', alias?: string  } 
   
 export interface UserSubscriptionWhereInput {
   mutation_in?: prisma.MutationType[]
@@ -1937,8 +1921,6 @@ export interface UserSubscriptionWhereInput {
   updatedFields_contains_some?: string[]
   node?: UserWhereInput | null
   AND?: UserSubscriptionWhereInput[]
-  OR?: UserSubscriptionWhereInput[]
-  NOT?: UserSubscriptionWhereInput[]
 }
 export type UserSubscriptionWhereInputInputObject =
   | Extract<keyof UserSubscriptionWhereInput, string>
@@ -1948,8 +1930,6 @@ export type UserSubscriptionWhereInputInputObject =
   | { name: 'updatedFields_contains_some', alias?: string  } 
   | { name: 'node', alias?: string  } 
   | { name: 'AND', alias?: string  } 
-  | { name: 'OR', alias?: string  } 
-  | { name: 'NOT', alias?: string  } 
   
 
 export type PostOrderByInputValues =
@@ -1975,10 +1955,6 @@ export type UserOrderByInputValues =
   | 'password_DESC'
   | 'name_ASC'
   | 'name_DESC'
-  | 'createdAt_ASC'
-  | 'createdAt_DESC'
-  | 'updatedAt_ASC'
-  | 'updatedAt_DESC'
   
 export type MutationTypeValues =
   | 'CREATED'

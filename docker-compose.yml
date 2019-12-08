@@ -11,18 +11,17 @@ services:
         managementApiSecret: lemo_lantu_secret_666
         databases:
           default:
-            connector: postgres
-            host: postgres
-            port: 5432
-            user: lemo_lantu_admin
-            password: lemo_lantu
-  postgres:
-    image: postgres:10.3
+            connector: mongo
+            uri: mongodb://prisma:prisma@mongo
+  mongo:
+    image: mongo:3.6
     restart: always
     environment:
-      POSTGRES_USER: lemo_lantu_admin
-      POSTGRES_PASSWORD: lemo_lantu
+      MONGO_INITDB_ROOT_USERNAME: prisma
+      MONGO_INITDB_ROOT_PASSWORD: prisma
+    ports:
+      - '27017:27017'
     volumes:
-      - postgres:/var/lib/postgresql/data
+      - mongo:/var/lib/mongo
 volumes:
-  postgres: ~
+  mongo: ~

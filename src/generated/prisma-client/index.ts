@@ -233,8 +233,6 @@ export interface PostWhereInput {
   content_not_ends_with?: Maybe<String>;
   author?: Maybe<UserWhereInput>;
   AND?: Maybe<PostWhereInput[] | PostWhereInput>;
-  OR?: Maybe<PostWhereInput[] | PostWhereInput>;
-  NOT?: Maybe<PostWhereInput[] | PostWhereInput>;
 }
 
 export interface UserWhereInput {
@@ -294,12 +292,8 @@ export interface UserWhereInput {
   name_not_starts_with?: Maybe<String>;
   name_ends_with?: Maybe<String>;
   name_not_ends_with?: Maybe<String>;
-  posts_every?: Maybe<PostWhereInput>;
   posts_some?: Maybe<PostWhereInput>;
-  posts_none?: Maybe<PostWhereInput>;
   AND?: Maybe<UserWhereInput[] | UserWhereInput>;
-  OR?: Maybe<UserWhereInput[] | UserWhereInput>;
-  NOT?: Maybe<UserWhereInput[] | UserWhereInput>;
 }
 
 export type UserWhereUniqueInput = AtLeastOne<{
@@ -512,8 +506,6 @@ export interface PostSubscriptionWhereInput {
   updatedFields_contains_some?: Maybe<String[] | String>;
   node?: Maybe<PostWhereInput>;
   AND?: Maybe<PostSubscriptionWhereInput[] | PostSubscriptionWhereInput>;
-  OR?: Maybe<PostSubscriptionWhereInput[] | PostSubscriptionWhereInput>;
-  NOT?: Maybe<PostSubscriptionWhereInput[] | PostSubscriptionWhereInput>;
 }
 
 export interface UserSubscriptionWhereInput {
@@ -523,8 +515,6 @@ export interface UserSubscriptionWhereInput {
   updatedFields_contains_some?: Maybe<String[] | String>;
   node?: Maybe<UserWhereInput>;
   AND?: Maybe<UserSubscriptionWhereInput[] | UserSubscriptionWhereInput>;
-  OR?: Maybe<UserSubscriptionWhereInput[] | UserSubscriptionWhereInput>;
-  NOT?: Maybe<UserSubscriptionWhereInput[] | UserSubscriptionWhereInput>;
 }
 
 export interface NodeNode {

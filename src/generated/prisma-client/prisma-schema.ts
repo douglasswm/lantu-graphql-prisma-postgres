@@ -195,8 +195,6 @@ input PostSubscriptionWhereInput {
   updatedFields_contains_some: [String!]
   node: PostWhereInput
   AND: [PostSubscriptionWhereInput!]
-  OR: [PostSubscriptionWhereInput!]
-  NOT: [PostSubscriptionWhereInput!]
 }
 
 input PostUpdateInput {
@@ -315,8 +313,6 @@ input PostWhereInput {
   content_not_ends_with: String
   author: UserWhereInput
   AND: [PostWhereInput!]
-  OR: [PostWhereInput!]
-  NOT: [PostWhereInput!]
 }
 
 input PostWhereUniqueInput {
@@ -409,8 +405,6 @@ input UserSubscriptionWhereInput {
   updatedFields_contains_some: [String!]
   node: UserWhereInput
   AND: [UserSubscriptionWhereInput!]
-  OR: [UserSubscriptionWhereInput!]
-  NOT: [UserSubscriptionWhereInput!]
 }
 
 input UserUpdateInput {
@@ -501,12 +495,8 @@ input UserWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
-  posts_every: PostWhereInput
   posts_some: PostWhereInput
-  posts_none: PostWhereInput
   AND: [UserWhereInput!]
-  OR: [UserWhereInput!]
-  NOT: [UserWhereInput!]
 }
 
 input UserWhereUniqueInput {

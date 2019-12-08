@@ -33,6 +33,10 @@ Run Prisma locally via Docker:
 1. Ensure you have Docker installed on your machine. If not, you can get it from [here](https://store.docker.com/search?offering=community&type=edition).
 2. Run `docker-compose up -d`
 
+Export Prisma management API secret
+
+`export PRISMA_MANAGEMENT_API_SECRET="lemo_lantu_secret_666"`
+
 To set up database, run:
 
 ```
